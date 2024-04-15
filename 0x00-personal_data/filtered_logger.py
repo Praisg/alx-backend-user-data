@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Script for handling Personal Data
+Script 4 handling Personal Data
 """
 
 from typing import List
@@ -17,7 +17,7 @@ PII_FIELDS = ("name", "email", "phone", "ssn", "password")
 def filter_datum(fields: List[str], redaction: str,
                  message: str, separator: str) -> str:
     """
-    Replaces sensitive information in a message with a redacted value
+    Replaces sensitive info in a message with a redacted value
     based on the list of fields to redact
 
     Args:
@@ -37,7 +37,7 @@ def filter_datum(fields: List[str], redaction: str,
 
 def get_logger() -> logging.Logger:
     """
-    Returns a Logger object for handling Personal Data
+    Return Logger object for handling Personal Data
 
     Returns:
         A Logger object with INFO log level and RedactingFormatter
@@ -56,7 +56,7 @@ def get_logger() -> logging.Logger:
 
 def get_db() -> mysql.connector.connection.MySQLConnection:
     """
-    Returns a MySQLConnection object for accessing Personal Data database
+    Return MySQLConnection object for accessing Personal Data database
 
     Returns:
         A MySQLConnection object using connection details from
@@ -95,7 +95,7 @@ def main():
 
 class RedactingFormatter(logging.Formatter):
     """
-    Redacting Formatter class for filtering PII fields
+    Redacting Formatter class 4 filtering PII fields
     """
 
     REDACTION = "***"

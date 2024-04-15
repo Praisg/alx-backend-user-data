@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Route module for the API
+Routemodule for the API
 """
 from os import getenv
 from api.v1.views import app_views
@@ -60,9 +60,7 @@ def not_found(error) -> str:
 
 @app.errorhandler(401)
 def unauthorized(error) -> str:
-    """_summary_
-
-    Args:
+    """Args:
         error (_type_): _description_
 
     Returns:
@@ -73,9 +71,7 @@ def unauthorized(error) -> str:
 
 @app.errorhandler(403)
 def forbidden(error) -> str:
-    """_summary_
-
-    Args:
+    """Args:
             error (_type_): _description_
 
     Returns:

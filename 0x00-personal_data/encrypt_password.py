@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-Password Encryption and Validation Module
+Password Encrypt and Validation Module
 """
 import bcrypt
 
 
 def hash_password(password: str) -> bytes:
     """
-        Generates a salted and hashed password.
+        salted and hashed password.
 
         Args:
                 password (str): A string containing the plain text
@@ -24,7 +24,7 @@ def hash_password(password: str) -> bytes:
 
 def is_valid(hashed_password: bytes, password: str) -> bool:
     """
-        Validates whether the provided password matches the hashed password.
+        Validate whether the provided password matches the hashed password.
 
         Args:
                 hashed_password (bytes): A byte string representing
