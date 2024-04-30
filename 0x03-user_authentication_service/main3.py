@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Main file
+Main file3
 """
 from db import DB
 from user import User

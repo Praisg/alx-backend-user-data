@@ -33,7 +33,7 @@ class DB:
         return self.__session
 
     def add_user(self, email: str, hashed_password: str) -> User:
-        """_summary_
+        """brief_summary_
         """
         new_user = User(email=email, hashed_password=hashed_password)
         # add new user and commit to database
@@ -42,7 +42,7 @@ class DB:
         return new_user
 
     def find_user_by(self, **kwargs) -> User:
-        """_summary_
+        """_briefsummary_
 
         Returns:
             User: _description_
@@ -56,7 +56,7 @@ class DB:
         return user
 
     def update_user(self, user_id: int, **kwargs) -> None:
-        """_summary_
+        """_briefsummary_
 
         Args:
             user_id (int): _description_

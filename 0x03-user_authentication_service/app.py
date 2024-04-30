@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""_summary_
+"""_brief summary_
 """
 
 
@@ -20,7 +20,7 @@ def index() -> str:
 
 @app.route('/users', methods=['POST'])
 def users() -> str:
-    """_summary_
+    """_brief summary_
     """
     email = request.form.get('email')
     password = request.form.get('password')
@@ -35,9 +35,9 @@ def users() -> str:
 
 @app.route('/sessions', methods=['POST'])
 def login() -> str:
-    """_summary_
+    """_brief summary_
 
-    Returns:
+    Return:
         str: _description_
     """
     email = request.form.get('email')
@@ -56,7 +56,7 @@ def login() -> str:
 
 @app.route('/sessions', methods=['DELETE'])
 def logout() -> str:
-    """_summary_
+    """_brief summary_
     """
     session_id = request.cookies.get('session_id')
     user = AUTH.get_user_from_session_id(session_id)
@@ -68,7 +68,7 @@ def logout() -> str:
 
 @app.route('/profile', methods=['GET'])
 def profile() -> str:
-    """_summary_
+    """_brief summary_
     """
     session_id = request.cookies.get('session_id')
     user = AUTH.get_user_from_session_id(session_id)
@@ -82,7 +82,7 @@ def profile() -> str:
 def get_reset_password_token() -> str:
     """_summary_
 
-    Returns:
+    Return:
         str: _description_
     """
     email = request.form.get('email')
@@ -97,7 +97,7 @@ def get_reset_password_token() -> str:
 def update_password() -> str:
     """_summary_
 
-    Returns:
+    Return:
         str: _description_
     """
     email = request.form.get('email')

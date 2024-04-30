@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""_summary_
+"""_briefsummary_
 """
 
 
@@ -13,19 +13,19 @@ from typing import Union
 
 
 def _hash_password(password: str) -> str:
-    """_summary_
+    """_briefsummary_
 
     Args:
         password (str): _description_
 
-    Returns:
+    Return:
         bytes: _description_
     """
     return bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
 
 
 def _generate_uuid() -> str:
-    """_summary_
+    """_briefsummary_
 
     Raises:
         ValueError: _description_
@@ -42,12 +42,12 @@ class Auth:
     """
 
     def __init__(self):
-        """_summary_
+        """_briefsummary_
         """
         self._db = DB()
 
     def register_user(self, email: str, password: str) -> Union[None, User]:
-        """_summary_
+        """_briefsummary_
         """
         try:
             # find the user with the given email
@@ -61,13 +61,13 @@ class Auth:
             raise ValueError('User {} already exists'.format(email))
 
     def valid_login(self, email: str, password: str) -> bool:
-        """_summary_
+        """_briefsummary_
 
         Args:
             email (str): _description_
             password (str): _description_
 
-        Returns:
+        Return:
             Boolean: _description_
         """
         try:
@@ -79,12 +79,12 @@ class Auth:
         return bcrypt.checkpw(password.encode('utf-8'), user.hashed_password)
 
     def create_session(self, email: str) -> str:
-        """_summary_
+        """_briefsummary_
 
         Args:
             email (str): _description_
 
-        Returns:
+        Return:
             str: _description_
         """
         try:
@@ -96,7 +96,7 @@ class Auth:
             return user.session_id
 
     def get_user_from_session_id(self, session_id: str) -> User:
-        """_summary_
+        """_briefsummary_
 
         Args:
             session_id (_type_): _description_
@@ -111,7 +111,7 @@ class Auth:
             return user
 
     def destroy_session(self, user_id: str) -> None:
-        """_summary_
+        """_briefsummary_
 
         Args:
             user_id (str): _description_
@@ -125,7 +125,7 @@ class Auth:
             return None
 
     def get_reset_password_token(self, email: str) -> str:
-        """_summary_
+        """_briefsummary_
 
         Args:
             email (str): _description_
@@ -142,7 +142,7 @@ class Auth:
             return user.reset_token
 
     def update_password(self, reset_token: str, password: str) -> None:
-        """_summary_
+        """_briefsummary_
 
         Args:
             reset_token (str): _description_

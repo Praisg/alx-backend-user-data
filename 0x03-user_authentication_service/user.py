@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""_summary_
+"""_briefsummary_
 """
 
 
@@ -9,7 +9,7 @@ Base = declarative_base()
 
 
 class User(Base):
-    """_summary_
+    """_briefsummary_
 
     Args:
         Base (_type_): _description_
